@@ -1,0 +1,32 @@
+
+Here are the SQL statements used in PHP for absolute beginners, chapter 6.
+If you experience syntax error in your SQL statements,
+you can copy these statements one by one, and paste them into phpmyadmin
+
+
+-- create a new database named playground
+CREATE DATABASE playground CHARSET utf8;
+
+
+-- create a database table named poll
+CREATE TABLE poll (
+    poll_id INT NOT NULL AUTO_INCREMENT,
+    poll_question TEXT,
+    yes INT DEFAULT 0,
+    no INT DEFAULT 0,
+    PRIMARY KEY (poll_id)
+); 
+
+
+-- insert one row of data into database table poll
+INSERT INTO poll (
+    poll_question
+) VALUES (
+    "Is it hard fun to learn PHP?"
+);
+
+
+-- update one field in database table poll
+UPDATE poll SET yes = yes + 1 
+WHERE poll_id = 1;
+

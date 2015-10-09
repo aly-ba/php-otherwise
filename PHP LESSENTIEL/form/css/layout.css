@@ -1,0 +1,12 @@
+/*this selector will target the quiz form only*/
+form[action='index.php?page=quiz']{
+    position:relative;
+    margin: 30px 10px;
+}
+/*select only <p> and <select> inside the quiz form*/
+form[action='index.php?page=quiz'] p,
+form[action='index.php?page=quiz'] select{
+    display:inline-block;  
+}
+
+
